@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | VibeCodex</title>
+
+    <meta name="description" content="Discover VibeCodex, a creative space for organizing, exploring, and showcasing digital projects.">
+
+    <!-- Shared website stylesheets -->
+    <link rel="stylesheet" href="/VibeCodex/style/style.css">
+    <link rel="stylesheet" href="/VibeCodex/style/animation.css">
+
+    <style>
+        /* =====================================
+           ABOUT PAGE STYLES
+           ===================================== */
+
+        .about-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+            padding: 45px 0 80px;
+        }
+
+        
+
+        .about-hero {
+            position: relative;
+            padding: 80px 30px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid rgba(99, 165, 255, 0.15);
+            border-radius: 22px;
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(22, 119, 255, 0.2),
+                    transparent 60%
+                ),
+                #0b1220;
+        }
+
+        .about-eyebrow {
+            display: inline-block;
+            margin-bottom: 22px;
+            color: #63a5ff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        .about-hero h1 {
+            max-width: 850px;
+            margin: 0 auto 22px;
+            color: #f5f7ff;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.06em;
+        }
+
+        .about-hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #9ba9c2;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .about-section {
+            margin-top: 75px;
+            scroll-margin-top: 110px;
+        }
+
+        .about-section h2 {
+            margin-bottom: 20px;
+            color: #f5f7ff;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            letter-spacing: -0.04em;
+        }
+
+        .about-section p {
+            margin-bottom: 16px;
+            color: #9ba9c2;
+            line-height: 1.9;
+        }
+
+        .about-two-column {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .about-card {
+            padding: 30px;
+            border: 1px solid #1b2940;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #111b2d, #0b1220);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 165, 255, 0.45);
+        }
+
+        .about-card .about-icon {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            background: rgba(22, 119, 255, 0.13);
+            color: #63a5ff;
+            font-size: 1.5rem;
+        }
+
+        .about-card h3 {
+            margin-bottom: 14px;
+            color: #f5f7ff;
+            font-size: 1.25rem;
+        }
+
+        .about-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .value-item {
+            padding: 24px;
+            border-left: 2px solid #1677ff;
+            background: rgba(17, 27, 45, 0.55);
+        }
+
+        .value-item h3 {
+            margin-bottom: 10px;
+            color: #dce7ff;
+            font-size: 1.05rem;
+        }
+
+        .value-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .about-cta {
+            margin-top: 75px;
+            padding: 50px 25px;
+            border: 1px solid rgba(99, 165, 255, 0.2);
+            border-radius: 18px;
+            background:
+                radial-gradient(
+                    circle at 100% 0%,
+                    rgba(0, 191, 255, 0.12),
+                    transparent 50%
+                ),
+                #0d1524;
+            text-align: center;
+        }
+
+        .about-cta h2 {
+            margin-bottom: 15px;
+            color: #f5f7ff;
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            letter-spacing: -0.04em;
+        }
+
+        .about-cta p {
+            max-width: 580px;
+            margin: 0 auto 25px;
+            color: #9ba9c2;
+            line-height: 1.8;
+        }
+
+        .about-button {
+            display: inline-block;
+            padding: 13px 22px;
+            border: 1px solid #1677ff;
+            border-radius: 8px;
+            background: #1677ff;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .about-button:hover {
+            transform: translateY(-3px);
+            background: #0865e8;
+        }
+
+        .about-footer {
+            margin-top: 70px;
+            padding-top: 25px;
+            border-top: 1px solid #1b2940;
+            color: #73829d;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .about-footer a {
+            color: #8bbaff;
+            text-decoration: none;
+        }
+
+        .about-footer a:hover {
+            color: #00bfff;
+        }
+
+        @media (max-width: 700px) {
+            .about-page {
+                padding-top: 30px;
+            }
+
+            .about-hero {
+                padding: 60px 22px;
+            }
+
+            .about-two-column,
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section,
+            .about-cta {
+                margin-top: 50px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div class="site-background" aria-hidden="true">
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+    </div>
+
+    <!-- Fixed Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo" aria-label="VibeCodex homepage">
+                Vibe<span>Codex</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="about.html#our-story">Our Story</a>
+                <a href="dashboard.html">Workspace</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="about-page">
+
+        <!-- About Hero -->
+        <section class="about-hero reveal">
+
+            <span class="about-eyebrow">
+                Get to know VibeCodex
+            </span>
+
+            <h1>
+                Where creativity meets
+                <span class="gradient-text">code.</span>
+            </h1>
+
+            <p>
+                VibeCodex is a creative digital space designed to help you
+                organize your projects, explore your ideas, and showcase
+                the things you build.
+            </p>
+
+        </section>
+
+        <!-- MY PROFILE -->
+        <section class="about-section profile-section" id="my-profile">
+            <div class="about-section-inner">
+
+        <div class="profile-card reveal">
+
+            <div class="profile-photo-wrapper">
+                <div class="profile-photo-glow"></div>
+
+                <img
+                    src="../assets/images/ada-laplace.jpg"
+                    class="profile-photo"
+                >
+
+                <span class="profile-status">
+                    <span></span> Student Developer
+                </span>
+            </div>
+
+            <div class="profile-details">
+
+                <span class="about-label">THE PERSON BEHIND VIBECODEX</span>
+
+                <h2>Hi, I'm <span>Ada Laplace.</span></h2>
+
+                <h3>Student Developer</h3>
+
+                <p>
+                    I'm a student developer with an interest in technology,
+                    web development, and creative digital experiences.
+                    I enjoy learning new things, exploring ideas, and
+                    turning concepts into projects through code and design.
+                </p>
+
+                <p>
+                    VibeCodex is a space where I can showcase my work,
+                    develop my skills, and document my journey as I continue
+                    growing in the world of technology.
+                </p>
+
+                <div class="profile-skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Web Design</span>
+                    <span>Problem Solving</span>
+                </div>
+
+                <a href="index.html#portfolio" class="btn btn-primary">
+                    Explore My Projects
+                </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Our Story -->
+        <section class="about-section reveal" id="our-story">
+
+            <span class="about-eyebrow">Our story</span>
+
+            <h2>A home for your digital creations.</h2>
+
+            <p>
+                Every great digital experience begins with an idea.
+                Sometimes it starts as a simple design, a line of code,
+                or a project you cannot wait to bring to life.
+            </p>
+
+            <p>
+                VibeCodex provides a dedicated space to keep those ideas
+                organized. Whether you are building websites, experimenting
+                with applications, or exploring interface design, the goal
+                is to make your creative work easier to manage and present.
+            </p>
+
+            <p>
+                Instead of leaving your projects scattered across different
+                places, VibeCodex helps bring your work together in one
+                organized workspace.
+            </p>
+
+        </section>
+
+
+        <!-- Mission and Vision -->
+        <section class="about-section about-two-column">
+
+            <article class="about-card reveal">
+
+                <div class="about-icon" aria-hidden="true">✦</div>
+
+                <h3>Our mission</h3>
+
+                <p>
+                    To provide a simple, organized space where digital
+                    creators can keep track of their projects, celebrate
+                    their progress, and turn ideas into meaningful work.
+                </p>
+
+            </article>
+
+            <article class="about-card reveal">
+
+                <div class="about-icon" aria-hidden="true">◎</div>
+
+                <h3>Our vision</h3>
+
+                <p>
+                    To make managing and showcasing creative digital
+                    projects feel intuitive, inspiring, and accessible
+                    to people with different levels of experience.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- What VibeCodex Offers -->
+        <section class="about-section reveal">
+
+            <span class="about-eyebrow">What we offer</span>
+
+            <h2>Everything starts with an idea.</h2>
+
+            <p>
+                VibeCodex focuses on the practical tools that help you
+                organize and present your creative work.
+            </p>
+
+            <div class="about-values">
+
+                <article class="value-item">
+
+                    <h3>Project organization</h3>
+
+                    <p>
+                        Keep project names, categories, links, previews,
+                        and descriptions together in one place.
+                    </p>
+
+                </article>
+
+                <article class="value-item">
+
+                    <h3>Easy discovery</h3>
+
+                    <p>
+                        Search your project collection and filter it
+                        by category to find your work more quickly.
+                    </p>
+
+                </article>
+
+                <article class="value-item">
+
+                    <h3>Creative expression</h3>
+
+                    <p>
+                        Showcase websites, applications, designs,
+                        experiments, and other digital creations.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Our Values -->
+        <section class="about-section reveal">
+
+            <span class="about-eyebrow">What guides us</span>
+
+            <h2>Built around creativity.</h2>
+
+            <div class="about-two-column">
+
+                <article class="about-card">
+
+                    <h3>Keep it simple</h3>
+
+                    <p>
+                        Useful tools should be easy to understand.
+                        VibeCodex aims to keep project organization
+                        straightforward and approachable.
+                    </p>
+
+                </article>
+
+                <article class="about-card">
+
+                    <h3>Make room to experiment</h3>
+
+                    <p>
+                        Not every idea needs to be perfect from the start.
+                        Your workspace should make it easy to collect
+                        projects as your skills and ideas develop.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="about-cta reveal">
+
+            <span class="about-eyebrow">Your next chapter</span>
+
+            <h2>Ready to organize your ideas?</h2>
+
+            <p>
+                Explore your workspace, add your projects, and start
+                building your own collection of digital creations.
+            </p>
+
+            <a href="dashboard.html" class="about-button">
+                Explore the workspace →
+            </a>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="about-footer">
+
+            <p>
+                <a href="index.html">Home</a>
+                &nbsp;·&nbsp;
+                <a href="index.html#services">Services</a>
+                &nbsp;·&nbsp;
+                <a href="about.html">About</a>
+                &nbsp;·&nbsp;
+                <a href="dashboard.html">Workspace</a>
+            </p>
+
+            <p>
+                © <span id="currentYear"></span> VibeCodex.
+                Creativity meets code.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Shared website interactions -->
+    <script src="/Vibecodex/js/script.js"></script>
+
+</body>
+</html> 

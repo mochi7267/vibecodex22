@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Manage, organize, and showcase your digital projects in the VibeCodex workspace.">
+    <meta name="theme-color" content="#050914">
+
+    <title>Project Workspace | VibeCodex</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/VibeCodex/style/style.css">
+    <link rel="stylesheet" href="/VibeCodex/style/animation.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="site-background" aria-hidden="true">
+        <div class="glow-orb glow-orb-left"></div>
+        <div class="glow-orb glow-orb-right"></div>
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo" aria-label="VibeCodex Home">
+                VIBE<span>CODEX</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="dashboard.html" class="active">Workspace</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">
+                    ← Back to Home
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <!-- DASHBOARD HEADING -->
+        <section class="dashboard-header reveal">
+
+            <div>
+                <span class="section-label">
+                    YOUR CREATIVE SPACE
+                </span>
+
+                <h1>
+                    Project <span class="text-gradient">Workspace.</span>
+                </h1>
+
+                <p>
+                    Organize your ideas, manage your projects, and
+                    showcase what you've been creating.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                id="openFormButton"
+            >
+                <span aria-hidden="true">＋</span>
+                Add New Project
+            </button>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="dashboard-stats" aria-label="Project statistics">
+
+            <article class="dashboard-stat glass-card reveal">
+                <span class="dashboard-stat-label">
+                    Total Projects
+                </span>
+
+                <strong
+                    class="dashboard-stat-value"
+                    id="totalProjects"
+                >
+                    0
+                </strong>
+
+                <span class="dashboard-stat-note">
+                    Projects in your workspace
+                </span>
+            </article>
+
+
+            <article class="dashboard-stat glass-card reveal">
+                <span class="dashboard-stat-label">
+                    Categories
+                </span>
+
+                <strong
+                    class="dashboard-stat-value"
+                    id="totalCategories"
+                >
+                    0
+                </strong>
+
+                <span class="dashboard-stat-note">
+                    Different project types
+                </span>
+            </article>
+
+
+            <article class="dashboard-stat glass-card reveal">
+                <span class="dashboard-stat-label">
+                    Linked Projects
+                </span>
+
+                <strong
+                    class="dashboard-stat-value"
+                    id="linkedProjects"
+                >
+                    0
+                </strong>
+
+                <span class="dashboard-stat-note">
+                    Projects with a website URL
+                </span>
+            </article>
+
+        </section>
+
+
+        <!-- PROJECT MANAGEMENT -->
+        <section class="dashboard-workspace">
+
+            <div class="dashboard-toolbar">
+
+                <div>
+                    <h2>Your Projects</h2>
+
+                    <p class="text-secondary">
+                        Manage your digital creations in one place.
+                    </p>
+                </div>
+
+                <div class="dashboard-filters">
+
+                    <input
+                        type="search"
+                        class="form-control"
+                        id="searchProjects"
+                        placeholder="Search projects..."
+                        aria-label="Search projects"
+                    >
+
+                    <select
+                        class="form-control"
+                        id="filterCategory"
+                        aria-label="Filter projects by category"
+                    >
+                        <option value="all">All Categories</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="System Design">System Design</option>
+                        <option value="Database Design">Database Design</option>
+                        <option value="Documentation">Documentation</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD / EDIT PROJECT FORM -->
+            <section
+                class="glass-card"
+                id="projectFormPanel"
+                hidden
+                style="padding: 30px; margin-bottom: 30px;"
+                aria-labelledby="projectFormTitle"
+            >
+
+                <div class="modal-header">
+
+                    <div>
+                        <span class="section-label">
+                            PROJECT DETAILS
+                        </span>
+
+                        <h2 id="projectFormTitle">
+                            Add a New Project
+                        </h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        id="cancelFormButton"
+                        aria-label="Close project form"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <form id="projectForm">
+
+                    <input
+                        type="hidden"
+                        id="projectId"
+                        name="projectId"
+                    >
+
+                    <div class="form-group">
+                        <label for="projectName">
+                            Project Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="projectName"
+                            name="projectName"
+                            placeholder="e.g. Travel Explorer"
+                            maxlength="100"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="projectCategory">
+                            Project Category *
+                        </label>
+
+                        <select
+                            class="form-control"
+                            id="projectCategory"
+                            name="projectCategory"
+                            required
+                        >
+                            <option value="">Select a category</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="System Design">System Design</option>
+                            <option value="Database Design">Database Design</option>
+                            <option value="Documentation">Documentation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="projectUrl">
+                            Project Website URL
+                        </label>
+
+                        <input
+                            type="url"
+                            class="form-control"
+                            id="projectUrl"
+                            name="projectUrl"
+                            placeholder="https://example.com"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="projectImage">
+                            Project Image URL (optional)
+                        </label>
+
+                        <input
+                            type="url"
+                            class="form-control"
+                            id="projectImage"
+                            name="projectImage"
+                            placeholder="https://example.com/image.jpg"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="projectDescription">
+                            Project Description *
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="projectDescription"
+                            name="projectDescription"
+                            placeholder="Describe what your project does..."
+                            maxlength="1000"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            id="saveProjectButton"
+                        >
+                            Save Project
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-ghost"
+                            id="cancelProjectButton"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- PROJECT CARDS -->
+            <div
+                class="dashboard-project-grid"
+                id="projectGrid"
+                aria-live="polite"
+            >
+                <!-- JavaScript inserts project cards here. -->
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div class="empty-state" id="emptyState" hidden>
+
+                <div class="service-icon" style="margin: 0 auto 20px;">
+                    <span aria-hidden="true">⌘</span>
+                </div>
+
+                <h3>No projects yet</h3>
+
+                <p>
+                    Your workspace is ready. Add your first project
+                    to start building your collection.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="emptyAddButton"
+                >
+                    ＋ Create Your First Project
+                </button>
+
+            </div>
+
+
+            <!-- NO SEARCH RESULTS -->
+            <div class="empty-state" id="noResults" hidden>
+
+                <h3>No matching projects</h3>
+
+                <p>
+                    Try another search term or select a different category.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <a href="index.html" class="logo">
+                    VIBE<span>CODEX</span>
+                </a>
+
+                <p>
+                    © <span id="currentYear"></span> VibeCodex.
+                    All rights reserved.
+                </p>
+
+                <a href="index.html" class="project-link">
+                    Back to Home ↑
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- DASHBOARD JAVASCRIPT -->
+    <script src="/VibeCodex/js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Welcome to VibeCodex — a creative space for showcasing digital projects, exploring system design, and turning ideas into digital experiences.">
+
+    <meta name="theme-color" content="#050914">
+
+    <title>VibeCodex | Where Creativity Meets Code</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="/VibeCodex/style/style.css">
+    <link rel="stylesheet" href="/VibeCodex/style/animation.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="site-background" aria-hidden="true">
+        <div class="glow-orb glow-orb-left"></div>
+        <div class="glow-orb glow-orb-right"></div>
+    </div>
+
+
+    <!-- =====================================================
+         CINEMATIC WELCOME INTRO
+         Animation styling will be in animation.css.
+    ====================================================== -->
+
+    <div class="intro-overlay" id="introOverlay">
+
+        <div class="intro-grid"></div>
+
+        <div class="intro-particles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="intro-content">
+
+            <p class="intro-eyebrow">
+                A CREATIVE DEVELOPER EXPERIENCE
+            </p>
+
+            <h1 class="intro-title">
+                <span class="intro-line">WELCOME</span>
+                <span class="intro-line">
+                    TO <span class="intro-highlight">MY</span>
+                </span>
+                <span class="intro-line intro-title-blue">
+                    WEBSITE
+                </span>
+            </h1>
+
+            <p class="intro-subtitle">
+                Let's Build Something
+                <br>
+                Extraordinary Together
+            </p>
+
+            <div class="intro-loader">
+                <span></span>
+            </div>
+
+            <p class="intro-caption">
+                CREATIVITY MEETS CODE
+            </p>
+
+            <button
+                class="btn btn-primary intro-start"
+                id="introStartButton"
+                type="button"
+            >
+                GET STARTED
+                <span aria-hidden="true">→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="navbar" id="top">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo" aria-label="VibeCodex Home">
+                VIBE<span>CODEX</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="about.html">Our Story</a>
+                <a href="dashboard.html">Workspace</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-primary">
+                    Explore Workspace
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container hero-container">
+
+                <div class="hero-content reveal">
+
+                    <div class="hero-badge">
+                        <span class="status-dot"></span>
+                        YOUR CREATIVE DIGITAL SPACE
+                    </div>
+
+                    <h1 class="hero-title">
+                        Welcome to
+                        <span class="text-gradient">VibeCodex.</span>
+                        <span>Where Ideas</span>
+                        <span>Become Reality.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover a space where creativity meets technology.
+                        Showcase your projects, explore digital solutions,
+                        and transform your ideas into extraordinary
+                        digital experiences.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#portfolio" class="btn btn-primary">
+                            Explore Projects
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="about.html" class="btn btn-outline">
+                            Discover Our Story
+                        </a>
+
+                    </div>
+
+                    <p class="hero-note">
+                        Built for ideas, designed for creativity.
+                    </p>
+
+                    <div class="hero-stats">
+
+                        <div class="stat-item">
+                            <strong>∞</strong>
+                            <span>Ideas to Explore</span>
+                        </div>
+
+                        <div class="stat-item">
+                            <strong>01</strong>
+                            <span>Creative Community</span>
+                        </div>
+
+                        <div class="stat-item">
+                            <strong>100%</strong>
+                            <span>Creative Freedom</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DECORATIVE CODE WINDOW -->
+
+                <div class="code-window reveal-right">
+
+                    <div class="code-window-header">
+
+                        <div class="window-dots" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="code-window-title">
+                            vibecodex.js
+                        </span>
+
+                        <span class="text-blue">● Online</span>
+
+                    </div>
+
+                    <div class="code-window-body">
+
+<pre><span class="code-purple">const</span> <span class="code-blue">vibeCodex</span> = {
+  <span class="code-cyan">name</span>: <span class="code-green">"VibeCodex"</span>,
+
+  <span class="code-cyan">purpose</span>: <span class="code-green">"Create &amp; Explore"</span>,
+
+  <span class="code-cyan">creativity</span>: <span class="code-orange">Infinity</span>,
+
+  <span class="code-cyan">ideas</span>: [
+    <span class="code-green">"Design"</span>,
+    <span class="code-green">"Develop"</span>,
+    <span class="code-green">"Innovate"</span>
+  ],
+
+  <span class="code-purple">build</span>() {
+    <span class="code-purple">return</span> <span class="code-green">"Something amazing."</span>;
+  }
+};
+
+<span class="code-blue">vibeCodex</span>.<span class="code-cyan">build</span>();</pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVICES SECTION
+        ================================================== -->
+
+        <section class="section" id="services">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-label">
+                        WHAT WE EXPLORE
+                    </span>
+
+                    <h2 class="section-title">
+                        Ideas Into
+                        <span class="text-gradient">Digital Solutions.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Explore the different ways technology,
+                        thoughtful design, and creativity can solve
+                        problems and bring projects to life.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card glass-card reveal">
+
+                        <div class="service-icon" aria-hidden="true">⌘</div>
+
+                        <h3>Flowcharts</h3>
+
+                        <p>
+                            Visualize workflows and understand
+                            processes through clear, structured diagrams.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card glass-card reveal">
+
+                        <div class="service-icon" aria-hidden="true">◇</div>
+
+                        <h3>Diagrams</h3>
+
+                        <p>
+                            Organize complex ideas using UML,
+                            ERD, and other useful visual models.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card glass-card reveal">
+
+                        <div class="service-icon" aria-hidden="true">▤</div>
+
+                        <h3>Documentation</h3>
+
+                        <p>
+                            Present project information, technical
+                            details, and instructions clearly.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card glass-card reveal">
+
+                        <div class="service-icon" aria-hidden="true">⌘</div>
+
+                        <h3>System Design</h3>
+
+                        <p>
+                            Explore scalable system structures
+                            and practical software architecture.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card glass-card reveal">
+
+                        <div class="service-icon" aria-hidden="true">▤</div>
+
+                        <h3>Database Design</h3>
+
+                        <p>
+                            Structure information into organized
+                            databases with clear relationships.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT SECTION
+        ================================================== -->
+
+        <section class="section" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-visual reveal-left">
+
+                    <div class="about-visual-card glass-card">
+
+                        <div class="section-label">
+                            THE VIBECODEX IDEA
+                        </div>
+
+                        <h3>
+                            Creativity is the beginning.
+                            <span class="text-gradient">
+                                Code makes it possible.
+                            </span>
+                        </h3>
+
+                        <p>
+                            Every great digital experience starts
+                            with an idea. VibeCodex is designed to
+                            give those ideas a place to grow.
+                        </p>
+
+                        <div class="about-points">
+
+                            <div class="about-point">
+                                <span class="check-icon">✓</span>
+
+                                <div>
+                                    <h3>Explore</h3>
+                                    <p>
+                                        Discover creative digital projects.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="about-point">
+                                <span class="check-icon">✓</span>
+
+                                <div>
+                                    <h3>Organize</h3>
+                                    <p>
+                                        Keep project information organized.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="about-point">
+                                <span class="check-icon">✓</span>
+
+                                <div>
+                                    <h3>Showcase</h3>
+                                    <p>
+                                        Present ideas through a visual portfolio.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content reveal-right">
+
+                    <span class="section-label">
+                        ABOUT VIBECODEX
+                    </span>
+
+                    <h2>
+                        More Than Code.
+                        <span class="text-gradient">
+                            A Creative Experience.
+                        </span>
+                    </h2>
+
+                    <p>
+                        VibeCodex is a digital space created to
+                        showcase projects, explore ideas, and bring
+                        design and development together in one place.
+                    </p>
+
+                    <p>
+                        From websites and system concepts to diagrams
+                        and documentation, our goal is to make digital
+                        work easier to present, understand, and explore.
+                    </p>
+
+                    <a href="about.html" class="btn btn-outline">
+                        Learn More About Us
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PORTFOLIO SECTION
+        ================================================== -->
+
+        <section class="section" id="portfolio">
+
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-label">
+                        SELECTED WORK
+                    </span>
+
+                    <h2 class="section-title">
+                        Our Creative
+                        <span class="text-gradient">Portfolio.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        A collection of digital concepts and projects
+                        that demonstrate how ideas can become
+                        meaningful online experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card glass-card reveal">
+
+                        <div class="project-image">
+
+                            <div class="project-image-placeholder">
+                                <span aria-hidden="true">✈</span>
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Travel &amp; Tourism
+                            </span>
+
+                            <h3>Travel Explorer</h3>
+
+                            <p>
+                                A travel website concept for discovering
+                                destinations and planning adventures.
+                            </p>
+
+                            <a href="dashboard.html" class="project-link">
+                                Explore Workspace
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card glass-card reveal">
+
+                        <div class="project-image">
+
+                            <div class="project-image-placeholder">
+                                <span aria-hidden="true">✦</span>
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Food &amp; Restaurant
+                            </span>
+
+                            <h3>Restaurant Experience</h3>
+
+                            <p>
+                                A restaurant website concept featuring
+                                an elegant presentation of food and dining.
+                            </p>
+
+                            <a href="dashboard.html" class="project-link">
+                                Explore Workspace
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card glass-card reveal">
+
+                        <div class="project-image">
+
+                            <div class="project-image-placeholder">
+                                <span aria-hidden="true">⌂</span>
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Real Estate
+                            </span>
+
+                            <h3>Property Showcase</h3>
+
+                            <p>
+                                A property website concept for presenting
+                                homes and real estate information.
+                            </p>
+
+                            <a href="dashboard.html" class="project-link">
+                                Explore Workspace
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="project-card glass-card reveal">
+
+                        <div class="project-image">
+
+                            <div class="project-image-placeholder">
+                                <span aria-hidden="true">▤</span>
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                News &amp; Publishing
+                            </span>
+
+                            <h3>Blog &amp; News</h3>
+
+                            <p>
+                                A modern publishing concept for organizing
+                                articles, stories, and updates.
+                            </p>
+
+                            <a href="dashboard.html" class="project-link">
+                                Explore Workspace
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 5 -->
+
+                    <article class="project-card glass-card reveal">
+
+                        <div class="project-image">
+
+                            <div class="project-image-placeholder">
+                                <span aria-hidden="true">⌘</span>
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Technology
+                            </span>
+
+                            <h3>System Design</h3>
+
+                            <p>
+                                A conceptual workspace for documenting
+                                system architecture and technical ideas.
+                            </p>
+
+                            <a href="dashboard.html" class="project-link">
+                                Explore Workspace
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 6 -->
+
+                    <article class="project-card glass-card reveal">
+
+                        <div class="project-image">
+
+                            <div class="project-image-placeholder">
+                                <span aria-hidden="true">✧</span>
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Creative Development
+                            </span>
+
+                            <h3>VibeCodex Workspace</h3>
+
+                            <p>
+                                A project management space for adding,
+                                organizing, and showcasing digital work.
+                            </p>
+
+                            <a href="dashboard.html" class="project-link">
+                                Open Workspace
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="portfolio-footer reveal">
+
+                    <a href="dashboard.html" class="btn btn-primary">
+                        Manage Your Projects
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL CALL TO ACTION
+        ================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-card reveal">
+
+                    <span class="section-label">
+                        YOUR NEXT IDEA STARTS HERE
+                    </span>
+
+                    <h2>
+                        Ready to Build
+                        <span class="text-gradient">
+                            Something Extraordinary?
+                        </span>
+                    </h2>
+
+                    <p>
+                        Step into the VibeCodex workspace and start
+                        organizing, managing, and showcasing your
+                        creative projects.
+                    </p>
+
+                    <a href="dashboard.html" class="btn btn-primary">
+                        Get Started
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="#top" class="logo">
+                        VIBE<span>CODEX</span>
+                    </a>
+
+                    <p>
+                        Where creativity meets code. A digital space
+                        for ideas, projects, design, and development.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Explore</h3>
+
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Workspace</h3>
+
+                    <a href="dashboard.html">Project Dashboard</a>
+                    <a href="dashboard.html">Manage Projects</a>
+                    <a href="dashboard.html">Showcase Work</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="currentYear"></span> VibeCodex.
+                    All rights reserved.
+                </p>
+
+                <p>Built with creativity and code.</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/VibeCodex/js/script.js"></script>
+
+</body>
+</html>
